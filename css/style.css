@@ -10,7 +10,58 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/*HEADER*/
-/*MAIN*/
+.boolzap-container{
+    display: flex;
+    margin: 20px 40px;
+}
+
+.boolzap-container > section{
+    flex-grow: 1;
+}
+
+/*HEADER - Aside*/
+
+.boolzap-container > aside{
+    width: calc(100%/3);
+}
+
+aside{
+    border: 1px solid white;
+}
+
+#header-aside-profile{
+    background-color: #EAEAEA;
+    height: 60px;
+    display: flex;
+    text-align: center;
+    padding: 5px;
+}
+
+/*PROFILO*/
+#img-profile > img{
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+#img-profile > span{
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+/*ICONE*/
+#profile-icon{
+    display: flex;
+    align-items: center;
+}
+
+#profile-icon > i{
+    width: 32px;
+    height: 32px;
+    color: #B1B1B1;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+
 /*FOOTER*/
 /*RESPONSIVE*/
