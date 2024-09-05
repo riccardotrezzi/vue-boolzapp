@@ -84,7 +84,9 @@
                         <!--CHAT-->
 
                         <!--Prima Chat-->
-                        <div v-for="(contact, index) in contacts" class="box-chat row g-0" :class="{'active' : index == activeContactIndex}">
+                        <div v-for="(contact, index) in contacts" class="box-chat row g-0"
+                        :class="{'active' : index == activeContactIndex}"
+                        @click="contactActiveClick(index)">
                             <div class="col-2">
                                 <div class="img-profile-chat">
                                     <img :src="contact.avatar" :alt="contact.name">
@@ -111,12 +113,12 @@
                         <div class="header-section-profile row g-0">
                             <div class="col-1">
                                 <div class="img-profile-chat">
-                                    <img src="img/avatar_1.jpg" alt="Avatar-profile-1">
+                                    <img :src="contacts[activeContactIndex].avatar" :alt="contacts[activeContactIndex].name">
                                 </div>
                             </div>
                             <div class="col-9 d-flex justify-content-start">
                                 <div class="profile-text-chat">
-                                    <h6>Michele</h6>
+                                    <h6>{{contacts[activeContactIndex].name}}</h6>
                                     <p>Ultimo accesso oggi alle 12.00</p>
                                 </div>
                             </div>
@@ -130,50 +132,22 @@
                         </div> 
                     </header>
 
-                    <main class="d-flex justify-content-center">
-                        <div class="chat-container">
-                            
-                            <div class="message-row d-flex justify-content-start">
-                                <div class="message-text-chat received">
-
-                                    <div>
-                                        <p>Ricordati di stendere i panni</p>
-                                    </div>
-                                    
-                                    <div class="message-clock-chat">
-                                        <p>12.00</p>
-                                    </div>
+                    <main>
+                        <!--Messaggio-->
+                        <div v-for="(message, index) in contacts[activeContactIndex].messages" class="message-row-container"
+                        :class="{
+                            'sent' : message.status == 'sent',
+                            'received' : message.status == 'received',
+                        }">
+                            <div class="message-container">
+                                <div class="message-chat">
+                                    {{message.message}}
                                 </div>
                                 
-                            </div>
-                            
-                            <div class="message-row d-flex justify-content-end">
-                                <div class="message-text-chat sent">
-
-                                    <div>
-                                        <p>Hai portato a spasso il cane?</p>
-                                    </div>
-                                    
-                                    <div class="message-clock-chat">
-                                        <p>12.00</p>
-                                    </div>
+                                <div class="message-clock-chat">
+                                    {{message.date}}
                                 </div>
-                                
                             </div>
-                            <div class="message-row d-flex justify-content-end">
-                                <div class="message-text-chat sent">
-                                    <div>
-                                        <p>Ricordati di stendere i panni</p>
-                                    </div>
-                                    
-                                    <div class="message-clock-chat">
-                                        <p>12.00</p>
-                                    </div>
-                                </div>
-                                
-                            </div>
-
-
                             
                         </div>
                     </main>

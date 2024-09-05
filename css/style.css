@@ -191,52 +191,46 @@ aside{
 /*MAIN - Chat*/
 
 #app > section > main{
+    width: 100%;
     height: calc(100% - 130px);
     background-image: url(../img/mine.jpg);
-    padding-top: 20px;
-
+    background-size:auto;
+    padding: 10px 30px;
+    overflow-y: auto;
 }
 
-.chat-container{
-    width: 80%;
-
-}
-.message-row{
-    height: 70px;
-}
-
-.message-text-chat{
-    width: fit-content;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: rgb(244, 244, 244);
+.message-row-container{
+    display: flex;
     margin-bottom: 10px;
 }
 
+.message-container{
+    max-width: 40%;
+    padding: 10px;
+}
+
 .sent{
+    justify-content: flex-end;
     background-color: #D5F9BA;
     border-radius: 10px;
 }
 
 .received{
+    justify-content: flex-start;
     background-color: #ffffff;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-.message-row:first-child > p{
+.message-chat{
     font-size: 14px;
-    margin-bottom: 0;
 }
 
 .message-clock-chat{
     font-size: 10px;
     color:rgb(152, 152, 152);
     text-align: end;
-    line-height: 2px;
 }
-
-
-
 
 /*FOOTER - Chat*/
 
