@@ -8,16 +8,20 @@
 /*GENERAL*/
 body{
     font-family: Arial, Helvetica, sans-serif;
+    background: rgb(0,150,136);
+    background: linear-gradient(180deg, rgba(0,150,136,1) 20%, rgba(220,219,209,1) 20%);
 }
 
 .boolzap-container{
     display: flex;
-    margin: 20px 40px;
+    margin: 20px 30px;
+    box-shadow:5px 8px 20px rgba(104, 104, 104, 0.311);
 }
 
 .boolzap-container > section{
     flex-grow: 1;
 }
+
 
 /*HEADER - Aside*/
 
@@ -26,7 +30,7 @@ body{
 }
 
 aside{
-    border: 1px solid white;
+    border: 1px solid #EAEAEA;
 }
 
 #header-aside-profile{
@@ -48,6 +52,7 @@ aside{
     vertical-align: middle;
 }
 
+
 /*ICONE*/
 #profile-icon{
     display: flex;
@@ -62,6 +67,205 @@ aside{
     margin-left: 5px;
 }
 
+/*Notifiche*/
 
-/*FOOTER*/
+#section-message-on{
+    display: flex;
+    background-color: #8EDAFB;
+    height: 80px;
+    padding: 10px;
+    align-items: center;
+}
+#section-message-on > div:last-child{
+    margin-left: 10px;
+}
+
+.fa-stack:last-child{
+    color: #8EDAFB;
+    font-size: 20px;
+}
+
+.fa-circle{
+    color: white;
+    font-size: 35px;
+}
+
+#section-message-on > div:last-child > p{
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+#section-message-on > div:last-child > a{
+    font-size: 14px;
+    color:grey;
+}
+
+/*NAV*/
+
+#button-nav{
+    width: 20%;
+}
+#text-nav{
+    width: 80%;
+}
+
+/*MAIN - Aside*/
+
+#app > aside > main{
+    height: calc(100% - 194px);
+    overflow-y: auto;
+}
+
+/*BOX CHAT*/
+
+.box-chat{
+    width: 100%;
+    border-bottom: 1px solid #E8EBEB;
+    padding-top: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.active{
+    background-color: #e3e3e3;
+}
+
+.img-profile-chat > img{
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin-left: 5px;
+}
+
+.text-chat > h6{
+    font-size: 16px;
+}
+.text-chat > p{
+    font-size: 12px;
+    color:grey;
+}
+.clock-chat > p{
+    font-size: 10px;
+    color:rgb(152, 152, 152);
+    padding-right: 5px;
+}
+
+/************ CHAT ************/
+
+/*HEADER*/
+
+.header-section-profile{
+    background-color: #EAEAEA;
+    height: 60px;
+    display: flex;
+    text-align: center;
+    padding: 5px;
+}
+
+.img-profile-chat > img{
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+}
+.img-profile-chat > span{
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.profile-text-chat{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.profile-text-chat > h6{
+    font-size: 16px;
+    text-align: left;
+    line-height: 8px;
+}
+.profile-text-chat > p{
+    font-size: 12px;
+    color:grey;
+}
+
+/*MAIN - Chat*/
+
+#app > section > main{
+    height: calc(100% - 130px);
+    background-image: url(../img/mine.jpg);
+    padding-top: 20px;
+
+}
+
+.chat-container{
+    width: 80%;
+
+}
+.message-row{
+    height: 70px;
+}
+
+.message-text-chat{
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(244, 244, 244);
+    margin-bottom: 10px;
+}
+
+.sent{
+    background-color: #D5F9BA;
+    border-radius: 10px;
+}
+
+.received{
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.message-row:first-child > p{
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.message-clock-chat{
+    font-size: 10px;
+    color:rgb(152, 152, 152);
+    text-align: end;
+    line-height: 2px;
+}
+
+
+
+
+/*FOOTER - Chat*/
+
+#footer-chat{
+    background-color: #e3e3e3;
+    width: 100%;
+    height: 70px;
+    color: #EAEAEA;
+    padding: 10px 0;
+}
+
+.icon-footer-chat{
+    width: 15%;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.icon-footer-chat > i{
+    font-size: 24px;
+    color: #B1B1B1;
+    cursor: pointer;
+}
+
+.input-chat{
+    flex-grow: 1;
+    border-radius: 20px;
+    border: none;
+    padding-left: 10px;
+}
+
 /*RESPONSIVE*/
