@@ -11,6 +11,7 @@ const { createApp } = Vue
     data() {
       return {
         activeContactIndex : 0,
+        userChat : '',
         contacts: [
             {
                 name: 'Michele',
@@ -179,6 +180,44 @@ const { createApp } = Vue
     methods: {
         contactActiveClick(index) {
             this.activeContactIndex = index;
+        },
+        getFullDate(){
+            const now = new Date();
+
+            let fullDate = '';
+            fullDate += now.getDate().toString().padStart(2, '0');
+            fullDate += '/';
+            fullDate += (now.getMonth() + 1).toString().padStart(2, '0');
+            fullDate += '/';
+            fullDate += now.getFullYear();
+            fullDate += ' ';
+            fullDate += now.getHours().toString().padStart(2, '0');
+            fullDate += ':';
+            fullDate += now.getMinutes().toString().padStart(2, '0');
+            fullDate += ':';
+            fullDate += now.getSeconds().toString().padStart(2, '0');
+            
+            return fullDate;
+        },
+        sendMessage(){
+            if(this.userChat.trim().length > 0){
+
+                this.contacts[this.activeContactIndex].messages.push({
+                    date: this.getFullDate(),
+                    message: this.userChat.trim(),
+                    status: 'sent'
+                });
+
+                this.userChat = '';
+
+                setTimeout(() => {
+                    this.contacts[this.activeContactIndex].messages.push({
+                        date: this.getFullDate(),
+                        message: 'Ok!',
+                        status: 'received'
+                    });
+                }, 1000);
+            }          
         }
     }
   }).mount('#app');

@@ -148,8 +148,8 @@
                                     {{message.date}}
                                 </div>
                             </div>
-                            
                         </div>
+
                     </main>
 
                     <footer>
@@ -157,7 +157,11 @@
                             <span class="icon-footer-chat">
                                 <i class="fa-regular fa-face-smile"></i>
                             </span>
-                            <input type="text" class="input-chat" placeholder="Scrivi qualcosa...">
+                            <input @keyup.enter="sendMessage()" v-model="userChat"
+                            type="text" class="input-chat" placeholder="Scrivi un messaggio">
+                            
+                            
+
                             <span class="icon-footer-chat">
                                 <i class="fa-solid fa-microphone"></i>
                             </span>
