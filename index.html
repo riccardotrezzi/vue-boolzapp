@@ -84,155 +84,15 @@
                         <!--CHAT-->
 
                         <!--Prima Chat-->
-                        <div class="box-chat active row g-0 ">
+                        <div v-for="(contact, index) in contacts" class="box-chat row g-0" :class="{'active' : index == activeContactIndex}">
                             <div class="col-2">
                                 <div class="img-profile-chat">
-                                    <img src="img/avatar_1.jpg" alt="Avatar-profile-1">
+                                    <img :src="contact.avatar" :alt="contact.name">
                                 </div>
                             </div>
                             <div class="col-8">
                                 <div class="text-chat">
-                                    <h6>Michele</h6>
-                                    <p>Ultimo messaggio inviato</p>
-                                </div>
-                            </div>
-                            <div class="col-2 d-flex justify-content-end">
-                                <div class="clock-chat">
-                                    <p>12.00</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Seconda Chat-->
-                        <div class="box-chat row g-0">
-                            <div class="col-2">
-                                <div class="img-profile-chat">
-                                    <img src="img/avatar_2.jpg" alt="Avatar-profile-2">
-                                </div>
-                            </div>
-                            <div class="col-8">
-                                <div class="text-chat">
-                                    <h6>Fabio</h6>
-                                    <p>Ultimo messaggio inviato</p>
-                                </div>
-                            </div>
-                            <div class="col-2 d-flex justify-content-end">
-                                <div class="clock-chat">
-                                    <p>12.00</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Terza Chat-->
-                        <div class="box-chat row g-0">
-                            <div class="col-2">
-                                <div class="img-profile-chat">
-                                    <img src="img/avatar_3.jpg" alt="Avatar-profile-3">
-                                </div>
-                            </div>
-                            <div class="col-8">
-                                <div class="text-chat">
-                                    <h6>Samuele</h6>
-                                    <p>Ultimo messaggio inviato</p>
-                                </div>
-                            </div>
-                            <div class="col-2 d-flex justify-content-end">
-                                <div class="clock-chat">
-                                    <p>12.00</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Quarta Chat-->
-                        <div class="box-chat row g-0">
-                            <div class="col-2">
-                                <div class="img-profile-chat">
-                                    <img src="img/avatar_4.jpg" alt="Avatar-profile-4">
-                                </div>
-                            </div>
-                            <div class="col-8">
-                                <div class="text-chat">
-                                    <h6>Alessandro B.</h6>
-                                    <p>Ultimo messaggio inviato</p>
-                                </div>
-                            </div>
-                            <div class="col-2 d-flex justify-content-end">
-                                <div class="clock-chat">
-                                    <p>12.00</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Quinta Chat-->
-                        <div class="box-chat row g-0">
-                            <div class="col-2">
-                                <div class="img-profile-chat">
-                                    <img src="img/avatar_5.jpg" alt="Avatar-profile-5">
-                                </div>
-                            </div>
-                            <div class="col-8">
-                                <div class="text-chat">
-                                    <h6>Alessandro L.</h6>
-                                    <p>Ultimo messaggio inviato</p>
-                                </div>
-                            </div>
-                            <div class="col-2 d-flex justify-content-end">
-                                <div class="clock-chat">
-                                    <p>12.00</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Sesta Chat-->
-                        <div class="box-chat row g-0">
-                            <div class="col-2">
-                                <div class="img-profile-chat">
-                                    <img src="img/avatar_6.jpg" alt="Avatar-profile-6">
-                                </div>
-                            </div>
-                            <div class="col-8">
-                                <div class="text-chat">
-                                    <h6>Claudia</h6>
-                                    <p>Ultimo messaggio inviato</p>
-                                </div>
-                            </div>
-                            <div class="col-2 d-flex justify-content-end">
-                                <div class="clock-chat">
-                                    <p>12.00</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Settima Chat-->
-                        <div class="box-chat row g-0">
-                            <div class="col-2">
-                                <div class="img-profile-chat">
-                                    <img src="img/avatar_7.jpg" alt="Avatar-profile-7">
-                                </div>
-                            </div>
-                            <div class="col-8">
-                                <div class="text-chat">
-                                    <h6>Federico</h6>
-                                    <p>Ultimo messaggio inviato</p>
-                                </div>
-                            </div>
-                            <div class="col-2 d-flex justify-content-end">
-                                <div class="clock-chat">
-                                    <p>12.00</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Ottava Chat-->
-                        <div class="box-chat row g-0">
-                            <div class="col-2">
-                                <div class="img-profile-chat">
-                                    <img src="img/avatar_8.jpg" alt="Avatar-profile-8">
-                                </div>
-                            </div>
-                            <div class="col-8">
-                                <div class="text-chat">
-                                    <h6>Davide</h6>
+                                    <h6>{{contact.name}}</h6>
                                     <p>Ultimo messaggio inviato</p>
                                 </div>
                             </div>
