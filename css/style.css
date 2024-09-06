@@ -22,11 +22,11 @@ body{
     flex-grow: 1;
 }
 
-
 /*HEADER - Aside*/
 
 .boolzap-container > aside{
     width: calc(100%/3);
+    height: 100%;
 }
 
 aside{
@@ -115,6 +115,15 @@ aside{
     height: calc(100% - 194px);
     overflow-y: auto;
 }
+
+.name-active-contact{
+    display: inline-block;
+}
+
+.deactive-contact{
+    display: none;
+}
+
 
 /*BOX CHAT*/
 
@@ -261,5 +270,3 @@ aside{
     border: none;
     padding-left: 10px;
 }
-
-/*RESPONSIVE*/
